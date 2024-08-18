@@ -11,6 +11,7 @@ header {
     background-color: #F0F8FF;
     color: black;
     padding: 10px 0;
+    position: relative;
 }
 
 header nav {
@@ -20,8 +21,6 @@ header nav {
     width: 85%;
     margin: 0 auto;
     color: black;
-    position: relative;
-    /* Added to position the menu icon */
 }
 
 span {
@@ -284,17 +283,18 @@ footer ul li a:hover {
     transform: scale(1.2);
 }
 
-
 /* Responsive Styles */
 
 @media screen and (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+
     header nav {
         flex-direction: column;
         align-items: flex-end;
-        /* Positioning the menu to the right */
         width: 100%;
         position: fixed;
-        /* Fixed position for mobile */
         top: 0;
         right: 0;
         background-color: #F0F8FF;
@@ -302,44 +302,60 @@ footer ul li a:hover {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         z-index: 1000;
     }
+
+    header nav h1 {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 2em;
+    }
+
     header nav ul {
         flex-direction: column;
         gap: 10px;
         margin: 0;
         padding: 0;
     }
+
     .content-wrapper {
         flex-direction: column;
         align-items: center;
     }
+
     .sidebar {
         margin-left: 0;
         margin-top: 20px;
         width: 100%;
     }
+
     .card_container {
         flex-direction: column;
         align-items: center;
     }
+
     .card_wrapper {
         width: 100%;
         margin-bottom: 20px;
     }
+
     .h-card,
     .v-card {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
+
     .h-card img,
     .v-card img {
         width: 100%;
         max-width: 100%;
         height: auto;
     }
+
     #hero h1 {
         font-size: 2.5em;
     }
+
     #hero p {
         font-size: 1.2em;
     }
@@ -350,20 +366,26 @@ footer ul li a:hover {
         flex-direction: column;
         gap: 10px;
     }
+
     header nav ul li a {
         font-size: 1.2em;
     }
+
     .sidebar {
         padding: 10px;
     }
+
     .card_content h2 {
         font-size: 1.5em;
     }
+
     .card_content p {
         font-size: 1em;
     }
+
     .read-btn {
         padding: 8px 12px;
         font-size: 1em;
     }
 }
+
